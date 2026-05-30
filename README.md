@@ -90,5 +90,5 @@ lithium/
 
 ## License
 
-MIT
+BSD
 
