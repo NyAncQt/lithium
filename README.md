@@ -45,7 +45,7 @@ cargo build --release
 ## Run
 
 ```bash
-cargo run -p i2p-messenger-tui
+cargo run -p lithium-tui
 ```
 
 ## Controls
