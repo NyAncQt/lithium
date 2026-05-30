@@ -10,7 +10,7 @@ No servers. No accounts. No phone numbers. Just encrypted messages over I2P.
 - **End-to-end encrypted** — Noise XX protocol with forward secrecy
 - **Keypair identity** — your Ed25519 public key is your address
 - **Encrypted storage** — local message history encrypted with SQLCipher
-- **Cross-platform** — Linux, BSD, macOS (iOS coming soon)
+- **Cross-platform** — Linux works BSD, MacOS İOS comming soon
 
 ## Prerequisites
 
