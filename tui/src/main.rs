@@ -58,6 +58,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             vec![]
         };
         let my_dest = app.db.get_meta("dest").unwrap_or("Connecting...".to_string());
+        let display_dest = if my_dest.len() > 60 {
+            format!("{}...", &my_dest[..60])
+        } else {
+            my_dest.clone()
+        };
 
         terminal.draw(|f| {
             let size = f.area();
@@ -67,7 +72,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .constraints([Constraint::Min(0), Constraint::Length(3)])
                 .split(size);
 
-            let my_dest_p = Paragraph::new(my_dest.as_str()).block(Block::default().title("My I2P Address (Share this)").borders(Borders::ALL));
+            let my_dest_p = Paragraph::new(display_dest.as_str()).block(Block::default().title("My I2P Address (Share this)").borders(Borders::ALL));
             f.render_widget(my_dest_p, root[1]);
 
             let main_area = root[0];
@@ -94,7 +99,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 let s = if i == sel_idx && mode == 0 { format!("> {}", c.name) } else { c.name.clone() };
                 ListItem::new(s)
             }).collect();
-            let c_list = List::new(c_items).block(Block::default().title("Contacts (Ctrl+N: Add)").borders(Borders::ALL));
+            let c_list = List::new(c_items).block(Block::default().title("Lithium Contacts").borders(Borders::ALL));
             f.render_widget(c_list, main_chunks[0]);
 
             let chat_chunks = Layout::default()

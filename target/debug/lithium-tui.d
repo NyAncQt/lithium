@@ -1,0 +1,1 @@
+/home/cat/Projeler/lithium/target/debug/lithium-tui: /home/cat/Projeler/lithium/core/src/identity.rs /home/cat/Projeler/lithium/core/src/lib.rs /home/cat/Projeler/lithium/core/src/storage.rs /home/cat/Projeler/lithium/tui/src/main.rs

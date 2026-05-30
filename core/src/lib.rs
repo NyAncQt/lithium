@@ -27,8 +27,15 @@ impl App {
 
     pub async fn init_session(&self) -> Session<Stream> {
         let sess = Session::<Stream>::new(Default::default()).await.unwrap();
-        let dest = sess.destination().to_string();
+        let mut dest = sess.destination().to_string();
         
+        if dest.len() > 516 {
+            let half = dest.len() / 2;
+            if dest[..half] == dest[half..] {
+                dest = dest[..half].to_string();
+            }
+        }
+
         let mut user = self.user.lock().await;
         user.dest = dest.clone();
         self.db.set_meta("dest", &dest);
