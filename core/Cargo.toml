@@ -1,0 +1,19 @@
+[package]
+name = "lithium-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+yosemite = "0.7"
+snow = "0.9"
+rusqlite = { version = "0.31", features = ["bundled-sqlcipher"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ed25519-dalek = { version = "2", features = ["rand_core"] }
+rand = "0.8"
+base64 = "0.22"
+thiserror = "1.0"
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.11"

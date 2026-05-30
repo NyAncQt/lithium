@@ -1,0 +1,1 @@
+/home/cat/Projeler/i2p-messenger/target/debug/i2p-messenger-tui: /home/cat/Projeler/i2p-messenger/core/src/identity.rs /home/cat/Projeler/i2p-messenger/core/src/lib.rs /home/cat/Projeler/i2p-messenger/core/src/storage.rs /home/cat/Projeler/i2p-messenger/tui/src/main.rs
